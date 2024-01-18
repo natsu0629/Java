@@ -213,13 +213,46 @@ public class Qes1_13 {
         
         /*
 		 * 問題11
-		 *【概要】数値によりtrueを出力する
-		 *【詳細】
+		 *【概要】文字列型に型変換し、つなげて出力する。
+		 *【詳細】問題8で使用した【年齢・身長・体重】を文字列型に型変換し繋げる。
 		 */
-        // 
+        // 型を変換する！
+        age = 24;
+        String ageSt = age + "";
+        height = 168.5d;
+        String heightSt = height + "";
+        weight = 64.2d;
+        String weightSt = weight + "";
+        // コンソールに出力する
+        System.out.println(ageSt + heightSt + weightSt);
+        System.out.println("");
         
         
-
+        /*
+		 * 問題12
+		 *【概要】整数型に変換して出力する。
+		 *【詳細】問題11で使用した【年齢・身長】を整数型に変換して出力する。
+		 */
+        // 身長は一度double型に変換し、整数型に再変換する。
+		int ageInt = Integer.parseInt(ageSt);
+		double heightDb = Double.parseDouble(heightSt);
+		int heightInt = (int)heightDb;
+		System.out.println(ageInt);
+		System.out.println(heightInt);
+		System.out.println("");
+		
+        
+        /*
+		 * 問題13
+		 *【概要】条件一致の場合trueを出力。
+		 *【詳細】問題12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力。
+		 */
+		// boolean型の変数を宣言する
+		boolean isOverTeenage1;
+		// 問題12で使用した【年齢・身長】を基準に、【年齢が25もしくは身長が160以上】であればtrueを出力する条件式。
+		 isOverTeenage1 = (ageInt >= 25 || heightInt >= 160);
+	        System.out.println(isOverTeenage1);
+	        System.out.println("");
 	}
 
 }
