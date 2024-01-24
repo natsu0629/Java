@@ -8,21 +8,20 @@ public class Qes1_3 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		// 問題1-3
+		// 【問題1-3】
 		// ユーザー名をコンソールに入力するように指示
 		System.out.println("「ユーザー名」");
 		Scanner scanner = new Scanner(System.in);
 		// String型でnameを定義
 		String name = scanner.nextLine();
 
-		// 入力条件をつける
+		// 入力チェック
 		// nullチェック
 		if(name != null) {
 			// 半角英数字チェック
 			if(isHalfWidthCharacters(name)) {
 				// 文字数チェック
 				if(name.length() < 11) {
-
 					// すべてクリアした場合の表示内容
 					// 結果の変数を用意する
 					int result = 0;
@@ -30,9 +29,12 @@ public class Qes1_3 {
 					int count = 0;
 					// do...while構文であいこ、負けのときの繰り返し処理を行う。
 					do {
+						System.out.println("");
+						// 入力されたユーザー名をコンソールに出力する
 						System.out.println("ユーザー名「" + name + "」を登録しました");
 						// ユーザーのじゃんけんの手を準備
 						Random random1 = new Random();
+						// 0~2の数字をランダムに出力する
 						int userHands = random1.nextInt(3);
 						if(userHands == 0){
 							String userJanken = "グー";
@@ -47,6 +49,7 @@ public class Qes1_3 {
 
 						// PCのじゃんけんの手を準備
 						Random random2 = new Random();
+						// 0~2の数字をランダムに出力する
 						int pcHands = random2.nextInt(3);
 						if(pcHands == 0){
 							String pcJanken = "グー";
@@ -67,6 +70,8 @@ public class Qes1_3 {
 								(userHands == 2 && pcHands == 0)){
 							// 繰り返し回数をカウントする
 							count++;
+							// 問題に指定されている文を出力する
+							System.out.println("");
 							System.out.println("やるやん。");
 							System.out.println("次は俺にリベンジさせて");
 							System.out.println("");
@@ -74,6 +79,7 @@ public class Qes1_3 {
 							// 自分がじゃんけんでグーに負けた場合
 						}else if(userHands == 1 && pcHands == 0){
 							count++;
+							System.out.println("");
 							System.out.println("俺の勝ち！");
 							System.out.println("負けは次につながるチャンスです！");
 							System.out.println( "ネバーギブアップ！");
@@ -81,6 +87,7 @@ public class Qes1_3 {
 							// 自分がじゃんけんでチョキに負けた場合
 						}else if(userHands == 2 && pcHands == 1) {
 							count++;
+							System.out.println("");
 							System.out.println("俺の勝ち！");
 							System.out.println("たかがじゃんけん、そう思ってないですか？");
 							System.out.println("それやったら次も、俺が勝ちますよ");
@@ -88,6 +95,7 @@ public class Qes1_3 {
 							// 自分がじゃんけんでパーに負けた場合
 						}else if(userHands == 0 && pcHands == 2){
 							count++;
+							System.out.println("");
 							System.out.println("俺の勝ち！");
 							System.out.println("なんで負けたか、明日まで考えといてください。");
 							System.out.println("そしたら何かが見えてくるはずです");
@@ -95,9 +103,11 @@ public class Qes1_3 {
 							// あいこの場合
 						}else if(result == 0){
 							count++;
+							System.out.println("");
 							System.out.println("DRAW あいこ もう一回しましょう！");
 							System.out.println("");
 						}
+						// あいこ、負けの場合は処理を繰り返す
 					}while(result == 0 || result == 1);
 				}else {
 					System.out.println("「名前を10文字以内にしてください」");
@@ -107,6 +117,7 @@ public class Qes1_3 {
 		}else{
 			System.out.println("「名前を入力してください」");
 		}
+		// Scannerを閉じる
 		scanner.close();
 	}
 	private static boolean isHalfWidthCharacters(String name) {
