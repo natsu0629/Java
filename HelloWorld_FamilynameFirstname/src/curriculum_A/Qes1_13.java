@@ -49,7 +49,7 @@ public class Qes1_13 {
 		// 文字型
 		g = '\0';
 		// 文字列型
-		h = "";
+		h = null;
 		// ブーリアン型
 		i = false;
 
