@@ -73,9 +73,10 @@ public class Curriculum_New_1_18 {
 	
 
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
-	public static void fifty(double avg) {
+	public static void fifty(double ave) {
+//		double ave = average(arr);
 		boolean result ;
-		if(avg >= 50) {
+		if(ave >= 50) {
 			result = true;
 		}else {
 			result = false;
@@ -98,11 +99,11 @@ public class Curriculum_New_1_18 {
 		// Q5の呼び出し
 		randomNumber(3);
 		// Q6の呼び出し
-		int[] arr = randomNumber(3);
-		average(arr);
+//		int[] arr = randomNumber(3);
+		average(randomNumber(3));
 		// Q7の呼び出し
-		double avg = average(arr);
-		fifty(avg);
+//		double avg = average(arr);
+		fifty(average(randomNumber(3)));
 	}
 
 }
