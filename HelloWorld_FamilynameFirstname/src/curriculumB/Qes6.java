@@ -34,6 +34,10 @@ public class Qes6 {
 
 
 		// 拡張for文を用い、productsに入っている商品と入力されたtokensの商品を比較する。
+		// テレビ、ディスプレイの際に使用する変数を宣言する。
+		Random random5 = new Random();	
+		int stock5 = random5.nextInt(12);
+	    int displayStock = 11- stock5;
 		for (String token : tokens)
 			switch(token) {
 			// 入力された商品がパソコンだった場合の処理
@@ -69,12 +73,12 @@ public class Qes6 {
 				break;
 				// 入力された商品がテレビ、ディスプレイだった場合の処理
 			case "テレビ","ディスプレイ":
-				Random random5 = new Random();
-			    int stock5 = random5.nextInt(12);
-			    int displayStock = 11- stock5;
+//				Random random5 = new Random();	
+//			    int stock5 = random5.nextInt(12);
+//			    int displayStock = 11- stock5;
 		      	// テレビ＋ディスプレイ＝11になるように設定する
-				String str = (token == "テレビ") ? "テレビの残り台数は" + stock5 + "台です":
-		        "ディスプレイの残り台数は" + displayStock + "台です";
+				String str = (token.equals("テレビ") ? "テレビの残り台数は" + stock5 + "台です":
+		        "ディスプレイの残り台数は" + displayStock + "台です");
 		     	System.out.println(str);
 			    break;
 			default:
