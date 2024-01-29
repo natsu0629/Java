@@ -25,20 +25,20 @@ public class Qes7 {
 		// 最低一回はプログラムが実行されるようにするため、do...while文を使用
 		do {
 			System.out.println((i+1) + "人目の『英語』の点数を入力してください：");
-			Scanner scEnglish = new Scanner(System.in);
-			english[i] = scEnglish.nextInt();
+//			Scanner scEnglish = new Scanner(System.in);
+			english[i] = scanner.nextInt();
 
 			System.out.println((i+1) + "人目の『数学』の点数を入力してください：");
-			Scanner scMath = new Scanner(System.in);
-			math[i] = scMath.nextInt();
+//			Scanner scMath = new Scanner(System.in);
+			math[i] = scanner.nextInt();
 
 			System.out.println((i+1) + "人目の『理科』の点数を入力してください：");
-			Scanner scScience = new Scanner(System.in);
-			science[i] = scScience.nextInt();
+//			Scanner scScience = new Scanner(System.in);
+			science[i] = scanner.nextInt();
 
 			System.out.println((i+1) + "人目の『社会』の点数を入力してください：");
-			Scanner scSS = new Scanner(System.in);
-			socialStudies[i] = scSS.nextInt();
+//			Scanner scSS = new Scanner(System.in);
+			socialStudies[i] = scanner.nextInt();
 			
 			System.out.println();
 			i++;
