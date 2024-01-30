@@ -97,12 +97,8 @@ public class Curriculum_New_1_18 {
 		// Q4の呼び出し
 		times(10.2,10.2);
 		// Q5の呼び出し
-		randomNumber(3);
 		// Q6の呼び出し
-//		int[] arr = randomNumber(3);
-		average(randomNumber(3));
 		// Q7の呼び出し
-//		double avg = average(arr);
 		fifty(average(randomNumber(3)));
 	}
 
