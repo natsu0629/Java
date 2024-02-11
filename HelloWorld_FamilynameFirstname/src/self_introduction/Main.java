@@ -11,6 +11,7 @@ public class Main {
 
 		person1.bmi();
 		person1.print();
+		System.out.println("合計" + 1 + "人です");
 	}
 
 }
