@@ -1,4 +1,4 @@
-package self_introduction3;
+package curriculum1_33;
 
 class Person{
 	public static int count = 0;
@@ -42,20 +42,20 @@ class Person{
 	}
 	
 	
-//	// インスタンスメソッド「buy」を定義する（仮引数：car）
-//	public void buy(Car car) {
-//		// setOwnerメソッドとthisを用いてownerフィールドの値をセットする。
-//		car.setOwner(this.fullName());
-//		// 「〇〇が購入しました」と出力する処理を追加
-//		System.out.println(this.fullName() + "が購入しました");
-//	}
-//	
-//	// 引数の型が異なるbuyメソッドを定義（仮引数：bicycle）
-//	public void buy(Bicycle bicycle) {
-//		// setOwnerメソッドとthisを用いてownerフィールドの値をセットする。
-//		bicycle.setOwner(this.fullName());
-//		// 「〇〇が購入しました」と出力する処理を追加
-//		System.out.println(this.fullName() + "が購入しました");
-//	}
+	// インスタンスメソッド「buy」を定義する（仮引数：car）
+	public void buy(Car car) {
+		// setOwnerメソッドとthisを用いてownerフィールドの値をセットする。
+		car.setOwner(this.fullName());
+		// 「〇〇が購入しました」と出力する処理を追加
+		System.out.println(this.fullName() + "が購入しました");
+	}
+	
+	// 引数の型が異なるbuyメソッドを定義（仮引数：bicycle）
+	public void buy(Bicycle bicycle) {
+		// setOwnerメソッドとthisを用いてownerフィールドの値をセットする。
+		bicycle.setOwner(this.fullName());
+		// 「〇〇が購入しました」と出力する処理を追加
+		System.out.println(this.fullName() + "が購入しました");
+	}
 	
 }

@@ -1,4 +1,4 @@
-package self_introduction3;
+package curriculum1_33;
 
 public class Vehicle {
 	//  クラス型のフィールド定義

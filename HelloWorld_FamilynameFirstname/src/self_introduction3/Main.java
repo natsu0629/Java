@@ -11,19 +11,6 @@ person2.print();
 Person.printCount();
 
 
-// Carクラスのインスタンス「car」の所有者を「person1」に、Bicycleクラスのインスタンス「bicycle」の所有者を「person2」に設定する。
-Car car = new Car();
-car.setOwner(person1.firstName + person1.lastName);
-
-Bicycle bicycle = new Bicycle();
-bicycle.setOwner(person2.firstName + person2.lastName);
-
-System.out.println(car.getOwner());
-System.out.println(bicycle.getOwner());
-
-// buyメソッドを用いて、「person1」がcarを購入、「person2」がbicycleを購入するプログラムを作成する。
-person1.buy(car);
-person2.buy(bicycle);
 
 }
 }
